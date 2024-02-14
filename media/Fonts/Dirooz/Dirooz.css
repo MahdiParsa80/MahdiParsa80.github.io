@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Dirooz';
+	src: 	url( 'Dirooz.eot' ) format( 'eot' ),
+		url( 'Dirooz.woff2' ) format( 'woff2' ),
+		url( 'Dirooz.woff' ) format( 'woff' ),
+		url( 'Yekan.ttf' ) format( 'truetype' );
+	font-weight: normal;
+	font-style: normal;
+}

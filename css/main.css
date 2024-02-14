@@ -1,0 +1,451 @@
+@import url(/css/font-awesome.css);
+@import url(/media/Fonts/fonts.css);
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: rgb(21, 29, 51);
+}
+
+.nav-list {
+  list-style: none;
+}
+.nav-list-items {
+  text-align: center;
+  margin: 40px;
+  height: 30px;
+  transition: all 0.4s;
+}
+.nav-list-items:hover {
+  color: white;
+}
+.nav-list-items:hover a {
+  text-shadow: 0 0 rgba(0, 0, 0, 0.5);
+  font-size: 50px !important;
+}
+.nav-list-links {
+  font-family: IRANSans;
+  font-size: 40px;
+  color: rgb(248, 207, 22);
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+.hamburg {
+  width: 62px;
+  height: 52px;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  z-index: 50;
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 1s;
+}
+.menu-line {
+  width: 100%;
+  height: 7px;
+  background-color: rgb(248, 207, 22);
+  transform-origin: right;
+  transition: all 1s;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header-logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: 10px solid rgb(248, 207, 22);
+  box-shadow: 0px 0px 20px 8px black, inset 0px 0px 20px 8px black;
+  margin: 20px;
+}
+.header-title {
+  font-family: IRANSans;
+  font-size: 60px;
+  color: rgb(248, 207, 22);
+  text-shadow: 0 0 rgba(0, 0, 0, 0.5);
+}
+.header-subtitle {
+  font-family: Yekan;
+  font-size: 30px;
+  color: white;
+  text-shadow: 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.paragraph {
+  margin: 20px;
+  font-size: 18px;
+  font-family: Vazirmatn;
+  color: white;
+  text-align: justify;
+}
+
+.card {
+  position: relative;
+  flex-basis: 33.3333333%;
+  height: 33.3vw;
+  overflow: hidden;
+}
+.card:hover .card-overlay {
+  bottom: 0px;
+}
+.card-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(248, 207, 22, 0.75);
+  position: absolute;
+  bottom: 1000px;
+  z-index: 10;
+  transition: bottom 1s 0.1s ease-in-out;
+}
+.card-overlay h3 {
+  font-family: IRANSans;
+  color: white;
+  font-size: 3rem;
+  text-shadow: 0px 0px 10px black;
+}
+.card-overlay h4 {
+  font-family: Vazirmatn;
+  color: rgb(21, 29, 51);
+  font-size: 2rem;
+  padding: 5px;
+  margin: 10px 0px;
+}
+.card-overlay button {
+  width: 60%;
+  padding: 8px;
+  font-family: Yekan;
+  font-size: 2rem;
+  background-color: transparent;
+  border: solid 5.5px white;
+  border-radius: 20px;
+  color: white;
+  transition: all 0.3s;
+  text-shadow: 0px 0px 10px black;
+}
+.card-overlay button:hover {
+  background-color: red;
+  border-radius: 200px;
+  border: solid 5.5px red;
+  color: white;
+  font-weight: 700;
+  text-shadow: 0px 0px 0px black;
+}
+.card-content {
+  width: 100%;
+  height: 100%;
+}
+.card-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer h5 {
+  font-family: Yekan;
+  font-size: 20px;
+  color: white;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+  position: absolute;
+  z-index: 500;
+}
+.navbar-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+.navbar-right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(28, 34, 51);
+  width: 50%;
+  position: fixed;
+  right: -70vw;
+  transition: right 1s;
+}
+.navbar-left {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(17, 42, 71);
+  width: 50%;
+  position: fixed;
+  left: -70vw;
+  transition: left 1s;
+}
+
+.left-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-img {
+  position: absolute;
+  width: 50%;
+  border: solid 8px white;
+}
+.left-img-1 {
+  top: 15%;
+  left: 15%;
+}
+.left-img-2 {
+  top: 35%;
+  left: 35%;
+}
+.left-img-3 {
+  top: 55%;
+  left: 55%;
+}
+
+.checkbox:checked ~ .navbar-container .navbar-left {
+  left: 0vw;
+}
+.checkbox:checked ~ .navbar-container .navbar-right {
+  right: 0vw;
+}
+.checkbox:checked ~ .hamburg .menu {
+  transform: rotateZ(360deg);
+}
+.checkbox:checked ~ .hamburg .menu-line-1 {
+  transform: rotateZ(-42deg);
+}
+.checkbox:checked ~ .hamburg .menu-line-2 {
+  opacity: 0;
+}
+.checkbox:checked ~ .hamburg .menu-line-3 {
+  transform: rotateZ(42deg);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url(/media/images/bg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  flex-direction: row-reverse;
+}
+.about-left {
+  flex-basis: 40%;
+}
+.about-left img {
+  width: 80%;
+}
+.about-right {
+  flex-basis: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70vh;
+}
+
+.nav-list {
+  list-style: none;
+}
+.nav-list-items {
+  text-align: center;
+  margin: 40px;
+  height: 30px;
+  transition: all 0.4s;
+}
+.nav-list-items:hover {
+  color: white;
+}
+.nav-list-items:hover a {
+  text-shadow: 0 0 rgba(0, 0, 0, 0.5);
+  font-size: 50px !important;
+}
+.nav-list-links {
+  font-family: IRANSans;
+  font-size: 40px;
+  color: rgb(248, 207, 22);
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+.hamburg {
+  width: 62px;
+  height: 52px;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  z-index: 50;
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 1s;
+}
+.menu-line {
+  width: 100%;
+  height: 7px;
+  background-color: rgb(248, 207, 22);
+  transform-origin: right;
+  transition: all 1s;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header-logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: 10px solid rgb(248, 207, 22);
+  box-shadow: 0px 0px 20px 8px black, inset 0px 0px 20px 8px black;
+  margin: 20px;
+}
+.header-title {
+  font-family: IRANSans;
+  font-size: 60px;
+  color: rgb(248, 207, 22);
+  text-shadow: 0 0 rgba(0, 0, 0, 0.5);
+}
+.header-subtitle {
+  font-family: Yekan;
+  font-size: 30px;
+  color: white;
+  text-shadow: 0 0 rgba(0, 0, 0, 0.5);
+}
+
+.paragraph {
+  margin: 20px;
+  font-size: 18px;
+  font-family: Vazirmatn;
+  color: white;
+  text-align: justify;
+}
+
+.card {
+  position: relative;
+  flex-basis: 33.3333333%;
+  height: 33.3vw;
+  overflow: hidden;
+}
+.card:hover .card-overlay {
+  bottom: 0px;
+}
+.card-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(248, 207, 22, 0.75);
+  position: absolute;
+  bottom: 1000px;
+  z-index: 10;
+  transition: bottom 1s 0.1s ease-in-out;
+}
+.card-overlay h3 {
+  font-family: IRANSans;
+  color: white;
+  font-size: 3rem;
+  text-shadow: 0px 0px 10px black;
+}
+.card-overlay h4 {
+  font-family: Vazirmatn;
+  color: rgb(21, 29, 51);
+  font-size: 2rem;
+  padding: 5px;
+  margin: 10px 0px;
+}
+.card-overlay button {
+  width: 60%;
+  padding: 8px;
+  font-family: Yekan;
+  font-size: 2rem;
+  background-color: transparent;
+  border: solid 5.5px white;
+  border-radius: 20px;
+  color: white;
+  transition: all 0.3s;
+  text-shadow: 0px 0px 10px black;
+}
+.card-overlay button:hover {
+  background-color: red;
+  border-radius: 200px;
+  border: solid 5.5px red;
+  color: white;
+  font-weight: 700;
+  text-shadow: 0px 0px 0px black;
+}
+.card-content {
+  width: 100%;
+  height: 100%;
+}
+.card-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer h5 {
+  font-family: Yekan;
+  font-size: 20px;
+  color: white;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}/*# sourceMappingURL=main.css.map */
