@@ -26,11 +26,11 @@
         background-color: rgb(17, 42, 71);
         width: 50%;
         position: fixed;
-        left: -70vw;
+        left: -100vw;
         transition: left 1s;
     }
 
-    @media screen and (min-width: 576px) {
+    @media screen and (max-width: 576px) {
         &-right {
             width: 100%;
         }
@@ -133,8 +133,8 @@
         padding: 3rem;
     }
     
-    @media screen and (min-width: 576px) {
-        height: 90vh;
+    @media screen and (max-width: 576px) {
+        height: 150vh;
         &-left {
             display: none;
         }
