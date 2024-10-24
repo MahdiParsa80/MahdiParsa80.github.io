@@ -662,15 +662,15 @@ video {
 
 @keyframes open-menu {
   0% {
-    transform: scalY(0);
+    transform: scaleY(0);
   }
 
   80% {
-    transform: scalY(1.2);
+    transform: scaleY(1.2);
   }
 
   100% {
-    transform: scalY(1);
+    transform: scaleY(1);
   }
 }
 
