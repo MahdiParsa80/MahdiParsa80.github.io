@@ -10,41 +10,84 @@
         }
         body{
             padding-top:5rem;
-            height: 100svh;
-            width: 100svw;
+            min-height: 95svh;
+            width: 95svw;
             background-color: rgb(238, 240, 231);
             flex-direction: column;
             display: flex;
             align-items: center;
+            box-sizing: border-box;
         }
         .container{
             display: flex;
+            flex-wrap: wrap; /* allow items to wrap on small screens */
+            gap: 1rem; /* consistent spacing between boxes */
+            justify-content: center; /* center items */
+            max-width: 1100px;
+            width: 100%;
+            padding: 0 1rem;
         }
         .box{
             color: black;
             cursor: pointer;
-            background-color: rgb(228, 231, 217);
+            background-color: rgb(238, 240, 231);
             padding: 1rem 2rem;
-            margin: 2rem;
+            margin: 0px 1rem; /* spacing handled by gap on container */
+            border: #e7e6e6 solid 1px;
             border-radius: 1.5rem;
             box-shadow: #00000099 2px 5px 9px;
             text-decoration: none;
+            
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            
+            /* responsive sizing: allow boxes to shrink and wrap */
+            flex: 1 1 220px; /* grow, shrink, base width */
+            max-width: 320px;
+            transition: box-shadow .18s ease, transform .12s ease;
         }
-        .box:hover{
-            padding: 1rem 2rem;
-            margin: 2rem;
-            border-radius: 1.5rem;
-            box-shadow: #00000099 1px 1px 10px 0px;
+        .box:focus{
+            box-shadow:none;
+            transform: translateY(3px);
+            border: #e7e6e6 solid 1px;
             text-decoration: none;
+        }
+        
+        h2{
+            margin: 0 0 1.2rem 0;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* Small screens adjustments */
+        @media (max-width: 600px){
+            body{ padding-top: 2.5rem; }
+            .box{
+                padding: .75rem 1rem;
+                border-radius: 1rem;
+                max-width: 100%;
+                flex-basis: 100%; /* stack full width on very small screens */
+                font-size: 0.98rem;
+            }
+            .container{ gap: .75rem; }
+        }
+
+        @media (min-width: 601px) and (max-width: 900px){
+            .box{
+                flex: 1 1 40%;
+                max-width: 420px;
+            }
         }
     </style>
 </head>
 <body>
     <h2>Portfolio in progress...</h2>
-    <dvi class="container">
+    <div class="container">
             <a class="box" href="/family_restaurant/build/index.html">Family restaurant project</a>
             <a class="box" href="/red rocket/index.html">Red Rocket project</a>
             <a class="box" href="/contact-manager-app">Contact Manager App</a>
-    </dvi>
+    </div>
 </body>
 </html>
